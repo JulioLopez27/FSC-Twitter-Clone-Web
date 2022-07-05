@@ -40,7 +40,7 @@ export function Login({ singInUser }) {
         <div className="h-full flex justify-center">
             {/* div costado azul */}
             <div className='md:flex-1 hidden lg:flex justify-center items-center bg-birdblue '>
-                <img src={twitter}/>
+                <img className='h-5/6 drop-shadow-xl hover:animate-pulse' src={twitter}/>
             </div>
 
             <div className="flex-1 flex justify-center items-center p-12 space-y-6">
