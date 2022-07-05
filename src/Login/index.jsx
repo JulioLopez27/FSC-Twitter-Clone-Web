@@ -36,11 +36,14 @@ export function Login({ singInUser }) {
     })
 
     return (
-        <div className="h-full flex justify-center">
+        <div className="h-full flex flex-row justify-center">
+            {/* div costado azul */}
             <div className='bg-birdblue md:flex-1'></div>
+
             <div className="flex-1 flex justify-center items-center p-12 space-y-6">
                 <div className='max-w-md flex-1'>
-                    <h1 className="text-3xl">Acceda a su cuenta </h1>
+                    
+                   <h1 className="text-3xl text-center my-4">Acceda a su cuenta</h1>
 
                     <form className="space-y-6" onSubmit={formik.handleSubmit}>
 
@@ -57,8 +60,8 @@ export function Login({ singInUser }) {
                             {(formik.touched.email && formik.errors.email) &&
                                 (<div className='text-red-500 text-sm'>{formik.errors.email}</div>)}
                         </div>
-                        <div className="space-y-2">
 
+                        <div className="space-y-2">
                             <Input
                                 type="password"
                                 name="password"
@@ -86,9 +89,10 @@ export function Login({ singInUser }) {
                         </button>
                     </form>
 
-                    <span className="text-base text-silver text-center">
+                    <div className="text-lg text-center  text-silver my-4">
                         No tiene cuenta? <a href='/signup' className="text-birdblue"> Registrarme </a>
-                    </span>
+                    </div>
+
                 </div>
             </div>
         </div>
