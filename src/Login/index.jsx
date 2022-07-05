@@ -1,6 +1,7 @@
 import { useFormik } from 'formik'
 import * as yup from 'yup'
 import axios from 'axios'
+import twitter from '../imgs/LogoTwitter.png'
 
 // abstract obj for my inputs
 const Input = props => (
@@ -36,14 +37,16 @@ export function Login({ singInUser }) {
     })
 
     return (
-        <div className="h-full flex flex-row justify-center">
+        <div className="h-full flex justify-center">
             {/* div costado azul */}
-            <div className='bg-birdblue md:flex-1'></div>
+            <div className='md:flex-1 hidden lg:flex justify-center items-center bg-birdblue '>
+                <img src={twitter}/>
+            </div>
 
             <div className="flex-1 flex justify-center items-center p-12 space-y-6">
                 <div className='max-w-md flex-1'>
-                    
-                   <h1 className="text-3xl text-center my-4">Acceda a su cuenta</h1>
+                    <img className='w-12 lg:hidden' src={twitter}/>
+                   <h1 className="text-3xl  my-4">Acceda a su cuenta</h1>
 
                     <form className="space-y-6" onSubmit={formik.handleSubmit}>
 
