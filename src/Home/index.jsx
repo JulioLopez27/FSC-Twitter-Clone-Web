@@ -31,7 +31,7 @@ function TweetForm({ loggedInUser, onSuccess }) {
     <div className='border-b border-silver p-4 space-y-6'>
       {/* cabesal */}
       <div className='flex space-x-5'>
-        <img src="/src/imgs/avatar.png" className='w-7' />
+        <img src="/src/imgs/avatar.png" className='w-8' />
         <h1 className='font-bold text-xl'>Página inicial</h1>
       </div>
 
@@ -74,7 +74,7 @@ function Tweet({ name, username, avatar, children }) {
     <div className="flex space-x-3 p-4 border-b border-silver">
 
       <div >
-        <img src={avatar} />
+        <img className='w-14' src={avatar} />
       </div>
 
       <div className='space-y-1' >
