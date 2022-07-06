@@ -34,6 +34,8 @@ export function Signup({ singInUser }) {
         validationSchema,
         validateOnMount: true,
         initialValues: {
+            name:'',
+            username:'',
             email: '',
             password: ''
         }
@@ -50,7 +52,7 @@ export function Signup({ singInUser }) {
                         <Input
                             type="text"
                             name="name"
-                            placeholder="Nombre"
+                            placeholder="Ingrese su nombre"
                             values={formik.values.name}
                             onChange={formik.handleChange}
                             onBlur={formik.handleBlur}
@@ -64,7 +66,7 @@ export function Signup({ singInUser }) {
                         <Input
                             type="text"
                             name="username"
-                            placeholder="Nombre de usuario"
+                            placeholder="Ingrese su nombre de usuario"
                             values={formik.values.username}
                             onChange={formik.handleChange}
                             onBlur={formik.handleBlur}
