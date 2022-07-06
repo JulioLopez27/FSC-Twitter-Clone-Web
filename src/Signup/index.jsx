@@ -14,8 +14,8 @@ const validationSchema = yup.object(
         name: yup.string().required('Ingrese su nombre'),
         username: yup.string().required('Ingrese su nombre de usuario'),
         email: yup.string().required('Ingrese su e-mail').email('E-mail invalido'),
-        password: yup.string().required('Ingrese su constraseña')
-
+        password: yup.string().required('Ingrese su constraseña'),
+        passwordVerify:yup.string().required('Ingrese su contraseña')
     })
 
 export function Signup({ singInUser }) {
@@ -34,21 +34,22 @@ export function Signup({ singInUser }) {
         validationSchema,
         validateOnMount: true,
         initialValues: {
-            name:'',
-            username:'',
+            name: '',
+            username: '',
             email: '',
-            password: ''
+            password: '',
+            passwordVerify: ''
         }
     })
 
     return (
         <div className="h-full flex justify-center items-center p-12 ">
-            <div className='flex flex-col space-y-6 w-full lg:w-1/2'>
+            <div className='flex flex-col space-y-3 w-full lg:w-1/2'>
                 <h1 className="text-3xl text-center">Crea tu cuenta </h1>
 
-                <form className="space-y-6" onSubmit={formik.handleSubmit}>
+                <form className="space-y-5" onSubmit={formik.handleSubmit}>
 
-                    <div className="space-y-2">
+                    <div className="space-y-1">
                         <Input
                             type="text"
                             name="name"
@@ -62,7 +63,7 @@ export function Signup({ singInUser }) {
                             (<div className='text-red-500 text-sm'>{formik.errors.name}</div>)}
                     </div>
 
-                    <div className="space-y-2">
+                    <div className="space-y-1">
                         <Input
                             type="text"
                             name="username"
@@ -75,11 +76,11 @@ export function Signup({ singInUser }) {
                         {(formik.touched.username && formik.errors.username) &&
                             (<div className='text-red-500 text-sm'>{formik.errors.username}</div>)}
                     </div>
-                    <div className="space-y-2">
+                    <div className="space-y-1">
                         <Input
                             type="text"
                             name="email"
-                            placeholder="Email"
+                            placeholder="Ingrese su email"
                             values={formik.values.email}
                             onChange={formik.handleChange}
                             onBlur={formik.handleBlur}
@@ -88,7 +89,7 @@ export function Signup({ singInUser }) {
                         {(formik.touched.email && formik.errors.email) &&
                             (<div className='text-red-500 text-sm'>{formik.errors.email}</div>)}
                     </div>
-                    <div className="space-y-2">
+                    <div className="space-y-1">
 
                         <Input
                             type="password"
@@ -101,6 +102,22 @@ export function Signup({ singInUser }) {
                         />
                         {(formik.touched.password && formik.errors.password) &&
                             (<div className='text-red-500 text-sm'>{formik.errors.password}</div>)}
+
+                    </div>
+
+                    <div className="space-y-1">
+
+                        <Input
+                            type="password"
+                            name="passwordVerify"
+                            placeholder="Ingrese su contraseña"
+                            values={formik.values.passwordVerify}
+                            onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
+                            disabled={formik.isSubmitting}
+                        />
+                        {(formik.touched.passwordVerify && formik.errors.passwordVerify) &&
+                            (<div className='text-red-500 text-sm'>{formik.errors.passwordVerify}</div>)}
 
                     </div>
 
