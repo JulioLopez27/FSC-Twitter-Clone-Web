@@ -2,6 +2,7 @@ import { MAX_TWEET_CHAR } from "../MaxTweetChar";
 import { useFormik } from "formik";
 import * as yup from 'yup'
 import axios from "axios";
+import avatar from './../../images/avatar.png'
 
 
 export function TweetForm({ loggedInUser, onSuccess }) {
@@ -30,7 +31,7 @@ export function TweetForm({ loggedInUser, onSuccess }) {
     <div className='border-b border-silver p-4 space-y-6'>
       {/* cabesal */}
       <div className='flex space-x-5'>
-        <img src="/src/imgs/avatar.png" className='w-8' />
+        <img src={avatar} className='w-8' />
         <h1 className='font-bold text-xl'>Página inicial</h1>
       </div>
 

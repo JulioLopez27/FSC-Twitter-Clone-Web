@@ -1,5 +1,5 @@
 import { HeartIcon, BookmarkIcon } from '@heroicons/react/outline'
-import avatar from '../imgs/avatar.png'
+import avatar from './../../images/avatar.png'
 
 export function Tweet({ name, username, children }) {
   return (

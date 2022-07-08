@@ -1,7 +1,7 @@
 import { useFormik } from 'formik'
 import * as yup from 'yup'
 import axios from 'axios'
-import twitter from '../imgs/LogoTwitter.png'
+import twitter from '../images/LogoTwitter.png'
 
 // abstract obj for my inputs
 const Input = props => (

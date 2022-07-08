@@ -26,7 +26,7 @@ export function Home({ loggedInUser }) {
       <div>
         
         {data.length && data.map(tweet => (
-          <Tweet key={tweet.id} name={tweet.user.name} username={tweet.user.username} avatar="/src/imgs/4.png">
+          <Tweet key={tweet.id} name={tweet.user.name} username={tweet.user.username} avatar={tweet.user.avatar} >
               {tweet.text}
           </Tweet>
         ))}
