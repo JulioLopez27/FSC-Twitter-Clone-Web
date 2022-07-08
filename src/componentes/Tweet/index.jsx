@@ -1,7 +1,7 @@
 import { HeartIcon, BookmarkIcon } from '@heroicons/react/outline'
-// import { HeartIcon as Notliked } from '@heroicons/react/outline'
+import avatar from '../imgs/avatar.png'
 
-export function Tweet({ name, username, avatar, children }) {
+export function Tweet({ name, username, children }) {
   return (
     <div className=" flex space-x-3 p-4 border-b border-silver ">
 
