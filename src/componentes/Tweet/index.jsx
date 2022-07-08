@@ -1,5 +1,5 @@
-import { HeartIcon } from '@heroicons/react/outline'
-
+import { HeartIcon, BookmarkIcon } from '@heroicons/react/outline'
+// import { HeartIcon as Notliked } from '@heroicons/react/outline'
 
 export function Tweet({ name, username, avatar, children }) {
   return (
@@ -17,10 +17,21 @@ export function Tweet({ name, username, avatar, children }) {
 
 
         <div className='flex space-x-1 text-silver text-sm items-center'>
-          <HeartIcon className='w-6 stroke-1 ' />
-          <span>1.7k</span>
+          <button>
+            <HeartIcon className='transition ease-linear delay-0 hover:scale-110 duration-75 w-6 stroke-1 ' />
+          </button>
+          <span>0</span>
+
         </div>
       </div>
+
+
+      <div className='md:flex flex-col justify-start items-center space-y-10 !ml-auto '>
+        <button className='md:hover:-translate-y-1 stroke-3' >
+          <BookmarkIcon className=' w-6 stroke-1  ' />
+        </button>
+      </div>
+
 
     </div>
   )
