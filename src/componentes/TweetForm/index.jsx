@@ -3,6 +3,7 @@ import { useFormik } from "formik";
 import * as yup from 'yup'
 import axios from "axios";
 import avatar from './../../images/avatar.png'
+import { Menu } from '../Menu'
 
 
 export function TweetForm({ loggedInUser, onSuccess }) {
@@ -29,6 +30,9 @@ export function TweetForm({ loggedInUser, onSuccess }) {
 
   return (
     <div className='border-b border-silver p-4 space-y-6'>
+      {/* TopMenu */}
+      <Menu />
+
       {/* cabesal */}
       <div className='flex space-x-5'>
         <img src={avatar} className='w-8' />
