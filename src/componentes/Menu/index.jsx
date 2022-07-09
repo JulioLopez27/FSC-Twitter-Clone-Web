@@ -6,7 +6,7 @@ export function Menu() {
         <div className="hidden md:flex  place-content-between space-x-6">
             <span className="">Desarrollado por
                 <a className=" ml-1 text-birdblue "
-                    href="www.linkedin.com/in/juliolopezg95"
+                    href="https://www.linkedin.com/in/juliolopezg95"
                     target={"_blank"}
                 >@juliolopezg95</a>
             </span>
